@@ -1,0 +1,12 @@
+{
+  "name": "review-commits",
+  "version": "0.1.0",
+  "description": "Reviews the quality of a git repository's recent commit messages using an LLM.",
+  "type": "module",
+  "bin": {
+    "review-commits": "bin/review-commits.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
