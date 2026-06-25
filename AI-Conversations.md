@@ -1,13 +1,10 @@
 # AI Conversations — review-commits
 
-A record of how this project was built with Claude as a coding assistant. The
-working style throughout: I hand Claude **one step at a time**, it builds only
-that step (and a throwaway harness to prove it), then stops so I can verify
-before moving on. No jumping ahead.
+A record of how this project was built with Claude as a coding assistant.
 
 ---
 
-## Step 0 — Spec & working style (Jun 22)
+## Starting Prompt 0 
 
 Me:
 
@@ -52,7 +49,7 @@ What's the first step?
 
 ---
 
-## Step 1 — Skeleton (Jun 22)
+## Pormpt 1
 
 Me:
 
@@ -149,7 +146,7 @@ Notes on the choices:
 
 ---
 
-## Step 2 — `reviewer.js` (the LLM, built first on purpose) (Jun 24)
+## Prompt 2
 
 Me:
 
@@ -319,7 +316,7 @@ Decisions worth knowing:
 
 ---
 
-## Step 3 — `getCommits` in `git.js` (Jun 24)
+## Pormpt 3 
 
 Me:
 
@@ -414,7 +411,7 @@ Decisions and boundaries:
 
 ---
 
-## Step 4 — `cli.js` orchestration (local only) (Jun 24)
+## Prompt 4
 
 Me:
 
@@ -601,8 +598,7 @@ Decisions and things I flagged:
 
 ---
 
-## Step 5 — `withRepo` helper + route `cli.js` through it (Jun 24)
-
+## Prompt 5 
 Me:
 
 > Add a `withRepo(url, limit, callback)` helper in `src/git.js`. It works out
@@ -740,7 +736,7 @@ Decisions and flags:
 
 ---
 
-## Step 6 — Diff-grounded judging (alignment) (Jun 24)
+## Prompt 6
 
 Me:
 
@@ -855,7 +851,7 @@ Decisions:
 
 ---
 
-## Step 7 — Tests for `parseReview` (Jun 25)
+## Prompt 7 
 
 Me:
 
@@ -914,7 +910,7 @@ Notes:
 
 ---
 
-## Step 8 — Restore the null-input test + distinct fallback messages (Jun 25)
+## Prompt 8 
 
 Me:
 
@@ -989,7 +985,3 @@ constants back into one, this test fails immediately rather than silently
 passing on equal strings.
 
 ---
-
-_End of recorded sessions. Remaining work after this point (the `report.js`
-HTML report and `server.js` local server on port 3546, plus wiring them into
-`cli.js`) was completed separately._
