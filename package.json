@@ -6,6 +6,9 @@
   "bin": {
     "review-commits": "bin/review-commits.js"
   },
+  "scripts": {
+    "test": "node --test"
+  },
   "engines": {
     "node": ">=18"
   }
